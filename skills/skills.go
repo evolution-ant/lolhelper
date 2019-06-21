@@ -4,20 +4,23 @@ import (
 	"time"
 )
 
+// 闪现300净化、虚弱210，疾跑、屏障、点燃180，加血240，传送240，
+// 栓送360
 const (
-	burnCd       = 5 * time.Minute
-	cureCd       = 5 * time.Minute
-	disCd        = 5 * time.Minute
-	flashCd      = 5 * time.Minute
-	rCd          = 5 * time.Minute
-	runCd        = 5 * time.Minute
-	tpCd         = 5 * time.Minute
-	weakCd       = 5 * time.Minute
-	refineCd     = 5 * time.Minute
-	screenCd     = 5 * time.Minute
-	disciplineCd = 5 * time.Minute
+	burnCd       = 180 * time.Second
+	cureCd       = 240 * time.Second
+	disCd        = 5 * time.Second
+	flashCd      = 300 * time.Second
+	rCd          = 5 * time.Second
+	runCd        = 180 * time.Second
+	tpCd         = 360 * time.Second
+	weakCd       = 210 * time.Second
+	refineCd     = 210 * time.Second
+	screenCd     = 180 * time.Second
+	disciplineCd = 5 * time.Second
 	on           = true
 )
+
 const (
 	burnCommand       = "dr"
 	cureCommand       = "zl"

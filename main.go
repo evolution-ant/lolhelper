@@ -65,7 +65,7 @@ func main() {
 		fmt.Println(v.String())
 	}
 
-	go Looper(heros)
+	// go Looper(heros)
 	for {
 		if command, err := line.Prompt(""); err == nil {
 			if command == "all" {
@@ -108,7 +108,7 @@ func main() {
 }
 
 func Looper(heros []*hero.Hero) {
-	timer1 := time.NewTicker(5 * time.Second)
+	timer1 := time.NewTicker(30 * time.Second)
 	for {
 		select {
 		case <-timer1.C:
