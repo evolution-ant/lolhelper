@@ -15,6 +15,7 @@ const (
 	TopCommand = "s"
 )
 
+
 var (
 	HeroCommands = []string{
 		AdCommand,
