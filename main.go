@@ -20,6 +20,10 @@ var (
 	names      = []string{"john", "james", "mary", "nancy"}
 )
 
+const (
+	maren1 = "我***你个****你****全家*******"
+)
+
 func main() {
 	line := liner.NewLiner()
 	defer line.Close()
@@ -68,6 +72,11 @@ func main() {
 	// go Looper(heros)
 	for {
 		if command, err := line.Prompt(""); err == nil {
+			if command == "sb" {
+				fmt.Println(maren1)
+				utils.CopyToClipBoard(maren1)
+				continue
+			}
 			if command == "all" {
 				allString := ""
 				for _, v := range heros {
